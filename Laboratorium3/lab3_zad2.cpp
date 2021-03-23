@@ -26,7 +26,7 @@ public:
         this->String=Stringtmp;
     }
 
-    unsigned int getSize(){
+    unsigned int getSize() const{
         return this->rozmiar;
     }
 
