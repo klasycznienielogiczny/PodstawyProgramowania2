@@ -58,7 +58,7 @@ public: // methods:
 
     TwoDimensionMatrix & operator =(const TwoDimensionMatrix &m);
 
-    std::ostream& operator <<(std::ostream &os);
+    friend std::ostream& operator <<(std::ostream &os, const TwoDimensionMatrix &m);
     TwoDimensionMatrix& operator*=(const MatrixElement &number);
     TwoDimensionMatrix operator&&(const TwoDimensionMatrix& matrix) const;
     MatrixElement* operator[](const size_t &i) const;
