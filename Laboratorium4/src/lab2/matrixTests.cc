@@ -1,5 +1,11 @@
 #include <cstring> // strlen()
-
+#include <cassert>
+#ifdef NDEBUG
+#define assert(condition) ((void)0)
+#else
+#define assert(condition) /*implementation defined*/
+#endif
+#define assertm(exp, msg) assert(((void)msg, exp))
 #include <iostream>
 #include <sstream> // std::ostringstream
 #include <gtest/gtest.h>
@@ -25,7 +31,7 @@ TEST_F(MatrixTester, constructionEmptyMatrix_expectedAllElementsAreZero)
     constexpr MatrixElement defaultValue = 0;
 
     const TwoDimensionMatrix m;
-    static_assert (m.getSize() == elementsInEachDimentions, "Expected elements in each dimentions is 2!");
+    assertm (m.getSize() == elementsInEachDimentions, "Expected elements in each dimentions is 2!");
 
     for (int row=0; row<m.getSize(); ++row)
         for (int column=0; column<m.getSize(); ++column)

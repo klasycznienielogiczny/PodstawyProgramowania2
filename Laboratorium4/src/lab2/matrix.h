@@ -44,11 +44,11 @@ class TwoDimensionMatrix
 {
     constexpr static int size = 2;
 private: // fields:
-    MatrixElement matrix[size][size];
+    MatrixElement ** matrix;
 
 public:
     TwoDimensionMatrix();
-    TwoDimensionMatrix(TwoDimensionMatrix &m);
+    TwoDimensionMatrix(const TwoDimensionMatrix &m);
     TwoDimensionMatrix(const MatrixElement m[size][size]);
     ~TwoDimensionMatrix(){};
 
@@ -56,12 +56,12 @@ public: // methods:
     MatrixElement get(int row, int col) const;
     int getSize() const;
 
-    TwoDimensionMatrix & operator =(TwoDimensionMatrix &m);
+    TwoDimensionMatrix & operator =(const TwoDimensionMatrix &m);
 
     std::ostream& operator <<(std::ostream &os);
     TwoDimensionMatrix& operator*=(const MatrixElement &number);
     TwoDimensionMatrix operator&&(const TwoDimensionMatrix& matrix) const;
-    MatrixElement* operator[](const size_t &i);
+    MatrixElement* operator[](const size_t &i) const;
     operator size_t() const;
 };
 

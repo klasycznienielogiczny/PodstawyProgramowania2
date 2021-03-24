@@ -11,24 +11,36 @@ using namespace std;
 //#endif
 
 TwoDimensionMatrix::TwoDimensionMatrix(){
+    matrix = new MatrixElement * [size];
+    for(int i=0; i< size; ++i)
+        matrix[i] = new MatrixElement[size];
+
     for (int i=0;i<this->size;++i)
         for (int j=0;j<this->size;++j)
             this->matrix[i][j]=0;
 }
 
-TwoDimensionMatrix::TwoDimensionMatrix(TwoDimensionMatrix &m){
+TwoDimensionMatrix::TwoDimensionMatrix(const TwoDimensionMatrix &m){
+    matrix = new MatrixElement * [size];
+    for(int i=0; i< size; ++i)
+        matrix[i] = new MatrixElement[size];
+
     for (int i=0;i<this->size;++i)
         for (int j=0;j<this->size;++j)
             this->matrix[i][j]=m.matrix[i][j];
 }
 
 TwoDimensionMatrix::TwoDimensionMatrix(const MatrixElement m[size][size]){
+    matrix = new MatrixElement * [size];
+    for(int i=0; i< size; ++i)
+        matrix[i] = new MatrixElement[size];
+
     for (int i=0;i<this->size;++i)
         for (int j=0;j<this->size;++j)
             this->matrix[i][j]=m[i][j];
 }
 
-TwoDimensionMatrix& TwoDimensionMatrix::operator=(TwoDimensionMatrix &m){
+TwoDimensionMatrix& TwoDimensionMatrix::operator=(const TwoDimensionMatrix &m){
     for (int i=0;i<this->size;++i)
         for (int j=0;j<this->size;++j)
             this->matrix[i][j]=m.matrix[i][j];
@@ -36,7 +48,7 @@ TwoDimensionMatrix& TwoDimensionMatrix::operator=(TwoDimensionMatrix &m){
 }
 
 std::ostream& operator <<(std::ostream &os, const TwoDimensionMatrix &m){
-    os << m.get(0,0) <<", " << m.get(0,1) <<"/n" << m.get(1,0) <<", " << m.get(1,1);
+    os <<  m.get(0,0) <<" , " << m.get(0,1) <<"/n" << m.get(1,0) <<" , " << m.get(1,1);
     return os;
 }
 
@@ -70,9 +82,8 @@ TwoDimensionMatrix TwoDimensionMatrix::operator&&(const TwoDimensionMatrix& matr
     return m1;
 }
 
-MatrixElement* TwoDimensionMatrix::operator[](const size_t &i){
-    MatrixElement el = get(0,i);
-    return &el;
+MatrixElement* TwoDimensionMatrix::operator[](const size_t &i) const{
+    return matrix[i];
 }
 
 TwoDimensionMatrix::operator size_t() const{
