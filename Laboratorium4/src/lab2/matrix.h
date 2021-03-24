@@ -50,7 +50,7 @@ public:
     TwoDimensionMatrix();
     TwoDimensionMatrix(const TwoDimensionMatrix &m);
     TwoDimensionMatrix(const MatrixElement m[size][size]);
-    ~TwoDimensionMatrix(){};
+    ~TwoDimensionMatrix();
 
 public: // methods:
     MatrixElement get(int row, int col) const;

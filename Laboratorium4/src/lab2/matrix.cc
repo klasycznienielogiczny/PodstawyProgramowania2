@@ -40,6 +40,11 @@ TwoDimensionMatrix::TwoDimensionMatrix(const MatrixElement m[size][size]){
             this->matrix[i][j]=m[i][j];
 }
 
+TwoDimensionMatrix::~TwoDimensionMatrix(){
+    delete[] matrix;
+    delete matrix;
+};
+
 TwoDimensionMatrix& TwoDimensionMatrix::operator=(const TwoDimensionMatrix &m){
     for (int i=0;i<this->size;++i)
         for (int j=0;j<this->size;++j)
