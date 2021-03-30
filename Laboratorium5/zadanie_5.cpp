@@ -235,4 +235,5 @@ int main(){
     //funkcja(tablica,stringObject);
     std::cout<<std::endl<<"Teraz funkcja"<<std::endl;
     funkcja(tablica, intObject);
+    tablica.clear();
 }
