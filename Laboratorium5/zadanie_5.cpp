@@ -236,4 +236,5 @@ int main(){
     std::cout<<std::endl<<"Teraz funkcja"<<std::endl;
     funkcja(tablica, intObject);
     tablica.clear();
+    tablica.shrink_to_fit();
 }
