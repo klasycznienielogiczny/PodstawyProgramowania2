@@ -1,0 +1,16 @@
+05-05-2021 10:24:24 Kontrola
+05-05-2021 10:24:24 Testowy zapis do pliku
+05-05-2021 10:25:36 Kontrola
+05-05-2021 10:25:36 Testowy zapis do pliku
+05-05-2021 10:38:53 Kontrola
+05-05-2021 10:38:53 Testowy zapis do pliku
+05-05-2021 10:47:23 Kontrola
+05-05-2021 10:47:23 Testowy zapis do pliku
+05-05-2021 10:49:55 Kontrola
+05-05-2021 10:49:55 Testowy zapis do pliku
+05-05-2021 10:51:03 Kontrola
+05-05-2021 10:51:03 Testowy zapis do pliku
+05-05-2021 10:58:26 Kontrola
+05-05-2021 10:58:26 Testowy zapis do pliku
+05-05-2021 11:00:33 Kontrola
+05-05-2021 11:00:33 Testowy zapis do pliku
