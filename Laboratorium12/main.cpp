@@ -95,7 +95,7 @@ int main() {/*
     */
 
     //moje
-    /*
+
     // Konstruktor przenoszacy
     VectoredList v1;
     for (int i = 0; i < 10; ++i)
@@ -160,7 +160,7 @@ int main() {/*
     cout<<endl;
     cout<<"Dane v7:\nRozmiar:"<<v7.get_size()<<"\nCapacity:"<<v7.capacity<<endl;
     //dziala
-    */
+
     //metoda assign
     vector<string> vs;
     for (int i = 0; i < 10; ++i)
