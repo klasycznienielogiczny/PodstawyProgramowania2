@@ -160,7 +160,7 @@ int main(){
     for(size_t i = 0; i<15; ++i)
         v1.push_back(std::to_string(2*i));
 
-    for(auto element : &v1)
+    for(auto element : v1)
         std::cout<<element<<std::endl;
     return 0;
 }
